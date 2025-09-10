@@ -5,6 +5,7 @@
  */
 // Preprocessor directive
 #include <iostream>
+#include <String>
 
 int main()
 {
@@ -64,16 +65,65 @@ int main()
     bool isPassing;
     isPassing = true;
 
+    area = length * width;
+
     //Assignment is right associated;
     //length = 100;
     //width = 100;
     length = width = 100;
+    //std::cout << length;
+    
+    
+    //Arithmetic operators
+    // arith_op ::= + | - | * | / | %
+    length = length + 10;
+    width = width - 20;
+
+    // int division ::= int / int produces and int, remainder is lost
+    int result = 10 / 3; // = 3
+
+    // Modulos is remainder and ONLY works for intergral types
+    int remainder = 10 % 3;  // = 1
+
+    int negativeLength = -length;
+
+    //Scope - Lifetime of a variable
+    { //Starting a new block
+        int newVariable = 10;
+        double newVariable2 = 45.7;
+    }
+
+    {
+        char newVarible1 = 'A';
+    }
+    //std::cout << newVariable;
+
+    //Strings C++ = a string is a sequence of characters used to represent text.
+    std::string studentName;
+    studentName = "Bob";
+
+    studentName = studentName + " Wilson";
+
+    //Literal - great for static values
+    //Variables - great for writable values
+    //Named constant - read only data, varialbe that has a constant value (Pascal case = capitalize on word boundaries)
+    const double Pi = 3.14159;
+
+    // A = Pi * R2
+    double areaCircle = Pi * (radius * radius);
+
+    const int numberofLabGrades = 5;
+    const int numberofExamGrades = 4;
+
+    //Cannot write to a constant
+    //Pi = 140;
 }
 
 
 
 
-// String literals "..." read only data, fixed at the point of compulation and value cannont change
+// String literals "..." read only data, fixed at the point of compulation and value cannont change.
+// It is an expression. All expressions have a type and and a value
     // string literals can have "Whatever" 
     // Escape sequence - special meaning to the compiler - Starts with \ followed by a character
     // \n  - newline
@@ -86,4 +136,5 @@ int main()
     // 3.14159, or 3E10, -3E10, 3E-10
     // Every statement in C++ must end with a statement. A statement is anything that does something in the language
     // Variables must be declared before you cvan use them
-    // Variable -named menory location where data is stored
+    // Variable - named memory location where data is stored
+    // scope:: = lifetime
