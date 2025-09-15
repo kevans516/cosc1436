@@ -51,12 +51,16 @@ int main ()
     std::cout << "Participartion = " << participation << std::endl;
     std::cout << "Final exam = " << finalExam << std::endl;
 
+    double classAverage((labAverage * 0.65) +
+                         (examAverage * 0.20) +
+                         (participation * 0.05) +
+                         (finalExam * 0.10));
     std::cout << std::endl;
     std::cout << name << ", your class grade is:" << std::endl;
-    std::cout << "Lab Average = " << labAverage << std::endl;
-    std::cout << "Exam Average =" << examAverage << std::endl;
-    std::cout << "Participation =" << participation << std::endl;
-    std::cout << "Final Exam =" << finalExam << std::endl;
+    std::cout << "Lab Average (65%) = " << labAverage << " % " << std::endl;
+    std::cout << "Exam Average (20%) = " << examAverage << " % " << std::endl;
+    std::cout << "Participation (5%) = " << participation << " % " << std::endl;
+    std::cout << "Final Exam (10%) = " << finalExam << " % " << std::endl;
 
 }
 
