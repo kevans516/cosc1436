@@ -15,11 +15,40 @@ int main ()
     std::cout << "Kevin Evans " << std::endl;
     std::cout << "COSC 1436 - Fall 2025" << std::endl;
 
-    int name;
+    std::string name;
+    int lab1, lab2, lab3, lab4;
+    int exam1, exam2, exam3, participation, exam4;
     std::cout << "Please enter your name: "; std::cin >> name;
+    
+    std::cout << "Please enter Lab 1: "; std::cin >> lab1;
+    std::cout << "Please enter Lab 2: "; std::cin >> lab2;
+    std::cout << "Please enter Lab 3: "; std::cin >> lab3;
+    std::cout << "Please enter Lab 4: "; std::cin >> lab4;
+    std::cout << "Please enter Exam 1: "; std::cin >> exam1;
+    std::cout << "Please enter Exam 2: "; std::cin >> exam2;
+    std::cout << "Please enter Exam 3: "; std::cin >> exam3;
+    std::cout << "Please enter your participation: "; std::cin >> participation;
+    std::cout << "Please enter Exam 4: "; std::cin >> exam4;
 
+    double labAverage = (lab1 + lab2 + lab3 + lab4) / 4.0;
 
+    std::cout << std::endl;
+    std::cout << name << ", your lab grades are:" << std::endl;
+    std::cout << "Lab 1 = " << lab1 << std::endl;
+    std::cout << "Lab 2 = " << lab2 << std::endl;
+    std::cout << "Lab 3 = " << lab3 << std::endl;
+    std::cout << "Lab 4 = " << lab4 << std::endl;
 
+    std::cout << std::endl;
+    std::cout << name << ", your exam grades are:" << std::endl;
+    std::cout << "Exam 1 = " << exam1 << std::endl;
+    std::cout << "Exam 2 = " << exam2 << std::endl;
+    std::cout << "Exam 3 = " << exam3 << std::endl;
+
+    std::cout << std::endl;
+    std::cout << name << ", your other grades are:" << std::endl;
+    std::cout << "Participartion = " << participation << std::endl;
+    std::cout << "Exam 4 = " << exam4 << std::endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
