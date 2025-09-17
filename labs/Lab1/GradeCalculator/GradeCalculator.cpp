@@ -8,6 +8,7 @@ COSC 1436 Fall 2025
 */
 
 #include <iostream>
+#include <string>
 
 int main ()
 {

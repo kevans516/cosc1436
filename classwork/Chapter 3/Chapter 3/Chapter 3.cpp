@@ -51,5 +51,24 @@ void main()
 
     std::cout << smallValue << " " << largeValue << std::endl;
 
+    //Type coercion - compiler implicitly converts an expression's type to a larger type
+   
+    //Type casting - you explicitly convert an expression type to another type
 
+    int left = 10;
+    int right = 3;
+
+    double intDivision = 10 / 3; //int
+    intDivision = 10.0 / 3; // double / int => double
+    intDivision = 10 / 3.0; //int / double => double
+
+    intDivision = left / right; // int / int => int
+
+    intDivision = (double)left / right; //int / int => int
+    intDivision = left / (double)right; //int / double => double
+
+    intDivision = static_cast<double>(left) / right;  // double / int => double
+    intDivision = left / static_cast<double>(right); // int / double => double
+
+    intDivision = (int)"Hello"; 
 }
