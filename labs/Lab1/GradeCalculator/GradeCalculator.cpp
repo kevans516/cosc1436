@@ -20,7 +20,7 @@ int main ()
     int lab1, lab2, lab3, lab4;
     int exam1, exam2, exam3, participation =0, finalExam =0;
     std::cout << "Please enter your name: "; std::cin >> name;
-    
+
     std::cout << "Please enter Lab 1: "; std::cin >> lab1;
     std::cout << "Please enter Lab 2: "; std::cin >> lab2;
     std::cout << "Please enter Lab 3: "; std::cin >> lab3;
@@ -33,6 +33,10 @@ int main ()
 
     double labAverage = (lab1 + lab2 + lab3 + lab4) / 4.0;
     double examAverage = (exam1 + exam2 + exam3) / 3.0;
+    double classAverage((labAverage * 0.65) +
+                         (examAverage * 0.20) +
+                         (participation * 0.05) +
+                         (finalExam * 0.10));
 
     std::cout << std::endl;
     std::cout << name << ", your lab grades are:" << std::endl;
@@ -52,16 +56,13 @@ int main ()
     std::cout << "Participartion = " << participation << std::endl;
     std::cout << "Final exam = " << finalExam << std::endl;
 
-    double classAverage((labAverage * 0.65) +
-                         (examAverage * 0.20) +
-                         (participation * 0.05) +
-                         (finalExam * 0.10));
     std::cout << std::endl;
     std::cout << name << ", your class grade is:" << std::endl;
     std::cout << "Lab Average (65%) = " << labAverage << " % " << std::endl;
     std::cout << "Exam Average (20%) = " << examAverage << " % " << std::endl;
     std::cout << "Participation (5%) = " << participation << " % " << std::endl;
     std::cout << "Final Exam (10%) = " << finalExam << " % " << std::endl;
+    std::cout << "Class Average = " << classAverage << " % " << std::endl;
 
 }
 
