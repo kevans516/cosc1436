@@ -50,8 +50,7 @@ int main ()
     std::cout << "Exam 1 = " << exam1 << std::endl;
     std::cout << "Exam 2 = " << exam2 << std::endl;
     std::cout << "Exam 3 = " << exam3 << std::endl;
-
-    std::cout << std::endl;
+ std::cout << std::endl;
     std::cout << name << ", your other grades are:" << std::endl;
     std::cout << "Participartion = " << participation << std::endl;
     std::cout << "Final exam = " << finalExam << std::endl;

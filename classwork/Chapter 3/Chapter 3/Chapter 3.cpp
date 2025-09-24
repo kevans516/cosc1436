@@ -12,8 +12,9 @@ void main()
 
     // Function X  Y  Result
     //----------------------
-    std::cout << std::fixed;
     std::cout << std::setprecision(4);
+    std::cout << std::fixed;
+    
 
     std::cout << std::setw(9) << "Function " << std::setw(7) << " X " << std::setw(7) << " Y " << std::setw(12) << "Result" << std::endl;
 

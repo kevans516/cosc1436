@@ -21,7 +21,7 @@ int main()
     std::getline(std::cin, title);
 
     bool isEmpty = title == "";
-    if (isEmpty)
+    if (isEmpty) 
         std::cout << "Title is required" << std::endl;
 
     std::cout << "Enter runlength (in minutes): ";
@@ -34,25 +34,39 @@ int main()
 
     std::cout << "Enter the release year (1900-2100): ";
     std::cin >> releaseYear;
-    if (releaseYear < 1900)
-    {
-        std::cout << "Relase year must be at least 1900" << std::endl;
-    };
 
-    std::cout << "Enter optioinal descrioption: ";
+    if (releaseYear < 1900 || releaseYear > 2100)
+    {
+        std::cout << "Relase year must be between 1900 and 2100" << std::endl;
+        releaseYear = 1900;
+    }
+  
+
+    std::cout << "Enter optioinal description: ";
     std::getline(std::cin, description);
 
     //TODO: Validate userRating
     std::cout << "Enter optional user rating (1.0-10.0): ";
     std::cin >> userRating;
-
+    if (userRating < 1.0 || userRating > 10.0)
+    {
+        std::cout << "Rating must be between 1.0 and 10.0" << std::endl;
+        userRating = 1.0;
+    } 
+    
     std::cout << "Is this a classic (Y/N)? ";
     std::string input;
     std::cin >> input;
+
+
     if (_strcmpi(input.c_str(), "Y") ==0)
         isClassic = true;
-    if (_strcmpi(input.c_str(), "N") == 0)
-        isClassic = false;
+    else
+        if (_strcmpi(input.c_str(), "N") == 0)
+            isClassic = false;
+        else
+            std::cout << "You must enter Y or N"; 
+
     //TODO: Handle other values
 
 
